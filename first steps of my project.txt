@@ -1,0 +1,24 @@
+** 09/04 - 2 dia
+programa para elabora prototipos: Sketch for Windows
+
+tecnologia do Back será nodejs: 
+segue arquitetura non blocking io ( que permite fugir do fluxo padrao de requisiçao do back) 
+pois processa requisiçao de forma paralela e depois retornando resultado delas. 
+
+Ex: um processo que salva registro de banco de dados, entao nao é preciso aguardar que seja salvo para dar resposta ao usuario(front end). 
+    
+Ele deixa o registro sendo salvo depois que a requisição ja finalizou
+	
+	- Node.js is é single-threaded -> tem event loop ( loop de eventos) que vai captando td tipo de requisiçao e processando! 
+	
+	Com o nodejs
+	-  podemos seguir uma requisição, fazendo varios processamentos em paralelo e retornar uma unica requisição! 
+	 
+	 arquitetura servlets (mais utilizada hj)-> considerada baixo nivel de configuração de servidor (autoconfiguravel) -> 
+	 computação distribuida que  trabalha com multiplos serviços (ccontem varias comunicaçoes)
+	
+	
+	
+	 Terminal:  ferramenta chamada Oh My Zsh, com tema Spaceship e esquema de cores Dracula 
+	 
+	 cria uma pasta -> git bash -> verificar se td esta instalado   
