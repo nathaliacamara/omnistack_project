@@ -2,12 +2,22 @@
 
 // importar o modulo express 
 const express = require('express');
+const multer = require('multer');
+const multerConfig = require('./config/multer');
 
 //separa a parte de rotas do server
 const routes = express.Router();
 const BoxController = require('./controllers/BoxController');
+const FileController = require('./controllers/FileController');
 
 
 // cria uma rota de acesso para usuario, com middleware (interceptador/funçao) que modifica ou retorna uma resposta
 routes.post("/boxes", BoxController.store);
+routes.post("/boxes/:id", BoxController.show);
+
+routes.post(
+    "/boxes/:id/files", multer(multerConfig).single('file'), FileController.store);
+
+
+
 module.exports = routes; // exporta a variavel routes 
